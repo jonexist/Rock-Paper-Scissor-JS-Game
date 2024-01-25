@@ -23,7 +23,7 @@ body {
   align-items: center;
   border: 2px solid #F4F6FF;
   padding: 3%;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 .game-container h1 {
   font-size: 2.5rem;
@@ -31,27 +31,65 @@ body {
   text-transform: uppercase;
   font-weight: 900;
   font-style: italic;
+  line-height: 1.5;
 }
 
 .score-container {
   text-align: center;
   line-height: 2;
-  color: #F4F6FF;
-  font-weight: 400;
-  text-transform: capitalize;
-  font-size: 1.5rem;
+  color: rgba(244, 246, 255, 0.6509803922);
   margin-bottom: 1.5rem;
+}
+.score-container .winner-text {
+  font-size: 1.5rem;
+}
+.score-container .score-text {
+  font-size: 1.3rem;
+  font-weight: 300;
 }
 
 .selection-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 2rem;
   width: 100%;
   font-size: 1.2rem;
   text-transform: uppercase;
   color: #F4F6FF;
   line-height: 2;
+}
+.selection-container .versus-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: italic;
+  color: rgba(244, 246, 255, 0.6509803922);
+}
+.selection-container .selection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 2;
+  background-color: #F4F6FF;
+  padding: 1%;
+  border-radius: 15px;
+  width: 200px;
+}
+.selection-container .selection img {
+  width: 70px;
+  height: 70px;
+}
+.selection-container .selection p {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #333333;
+}
+.selection-container .selection:nth-child(3) {
+  flex-direction: row-reverse;
 }
 
 .game-options {
@@ -60,6 +98,10 @@ body {
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 3.5rem;
+}
+.game-options button {
+  border: none;
+  outline: none;
 }
 .game-options .game-choice {
   display: flex;
@@ -71,33 +113,28 @@ body {
   height: 100px;
   border-radius: 50%;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.game-options .game-choice:hover {
+  background-color: #c1ccff;
+  transform: scale(1.1);
 }
 
-.selection {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  text-transform: uppercase;
-  color: #F4F6FF;
+.play-again-btn {
+  border: none;
+  padding: 2%;
   font-size: 1.2rem;
-  line-height: 2;
-  background-color: #F4F6FF;
-  padding: 1%;
-  border-radius: 20px;
-  width: 200px;
-}
-.selection img {
-  width: 70px;
-  height: 70px;
-}
-.selection p {
-  font-weight: 500;
-  font-size: 1.1rem;
+  border-radius: 15px;
   color: #333333;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.play-again-btn:hover {
+  background-color: #1a1a1a;
+  transform: scale(1.1);
+  color: #F4F6FF;
 }
 
-.selection:nth-child(2) {
-  flex-direction: row-reverse;
+.hidden {
+  display: none;
+  transition: all 0.5s ease-in-out;
 }/*# sourceMappingURL=style.css.map */

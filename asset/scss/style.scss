@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+$font-family: 'Outfit', sans-serif;
+$font-color: #F4F6FF;
+$darken-white-color: #f4f6ffa6;
 $bg-color: #333333;
-$primary-color: #F4F6FF;
+$border-radius: 10px;
+$transition: all 0.5s ease-in-out;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Outfit', sans-serif;
+  font-family: $font-family;
 }
 
 html,
@@ -25,38 +29,76 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid $primary-color;
+  border: 2px solid $font-color;
   padding: 3%;
-  border-radius: 20px;
+  border-radius: $border-radius;
   h1 {
     font-size: 2.5rem;
-    color: $primary-color;
+    color: $font-color;
     text-transform: uppercase;
     font-weight: 900;
     font-style: italic;
+    line-height: 1.5;
   }
-
 }
 
 .score-container {
   text-align: center;
   line-height: 2;
-  color: $primary-color;
-  font-weight: 400;
-  text-transform: capitalize;
-  font-size: 1.5rem;
+  color: $darken-white-color;
   margin-bottom: 1.5rem;
+  .winner-text {
+    font-size: 1.5rem;
+  }
+  .score-text {
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
 }
 
 .selection-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 2rem;
   width: 100%;
   font-size: 1.2rem;
   text-transform: uppercase;
-  color: $primary-color;
+  color: $font-color;
   line-height: 2;
+  .versus-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-style: italic;
+    color: $darken-white-color;
+  }
+  .selection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    line-height: 2;
+    background-color: $font-color;
+    padding: 1%;
+    border-radius: 15px;
+    width: 200px;
+    img {
+      width: 70px;
+      height: 70px;
+    }
+    p {
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: $bg-color;
+    }
+  }
+
+  .selection:nth-child(3) {
+    flex-direction: row-reverse;
+  }
 }
 
 .game-options {
@@ -65,45 +107,44 @@ body {
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 3.5rem;
+  button {
+    border: none;
+    outline: none;
+  }
   .game-choice {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $primary-color !important;
+    background-color: $font-color !important;
     padding: 2%;
     width: 100px;
     height: 100px;
     border-radius: 50%;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; // Add transition for smooth color change and scaling
+
+    &:hover {
+      background-color: darken($font-color, 10%); // Darken the background color on hover
+      transform: scale(1.1); // Scale the button up to 110% on hover
+    }
   }
 }
 
-.selection {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  text-transform: uppercase;
-  color: $primary-color;
+.play-again-btn {
+  border: none;
+  padding: 2%;
   font-size: 1.2rem;
-  line-height: 2;
-  background-color: $primary-color;
-  padding: 1%;
-  border-radius: 20px;
-  width: 200px;
-  img {
-    width: 70px;
-    height: 70px;
-
-  }
-  p {
-    font-weight: 500;
-    font-size: 1.1rem;
-    color: $bg-color;
+  border-radius: 15px;
+  color: $bg-color;
+  transition: background-color 0.3s ease, transform 0.3s ease; // Add transition for smooth color change and scaling
+  &:hover {
+    background-color: darken($bg-color, 10%); // Darken the background color on hover
+    transform: scale(1.1); // Scale the button up to 110% on hover
+    color: $font-color;
   }
 }
 
-.selection:nth-child(2) {
-  flex-direction: row-reverse;
+.hidden {
+  display: none;
+  transition: $transition;
 }
