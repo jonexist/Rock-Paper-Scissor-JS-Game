@@ -9,28 +9,36 @@
 <body>
   
   <main class="game-container">
-    <h1 class="game-title">Rock Paper Scissors</h1>
-    <section class="game-options">
-        <button id="rock" class="game-option">Rock</button>
-        <button id="paper" class="game-option">Paper</button>
-        <button id="scissors" class="game-option">Scissors</button>
-    </section>
+    <h1 class="game-title">Rock, Paper, Scissors Game</h1>
     <section id="result" class="game-result"></section>
     <section class="score-container">
-        <div class="score">
-            <h2>Computer Score: <span id="computer-score">0</span></h2>
-            <h2>Human Score: <span id="human-score">0</span></h2>
-        </div>
-        <div class="round-winner">
-            <h2>Round Winner: <span id="round-winner"></span></h2>
-        </div>
-        <div class="game-winner">
-            <h2>Final Game Winner: <span id="game-winner"></span></h2>
-        </div>
+      <div id="round-winner">Game Started</div>
+      <div id="both-score">0 - 0</div>
+    </section>
+    <section class="game-options">
+      <div id="rock" class="game-choice">
+        <img src="/asset/img/Rock.png" alt="rock">
+      </div>
+      <div id="paper" class="game-choice">
+        <img src="/asset/img/Paper.png" alt="paper">
+      </div>
+      <div id="scissors" class="game-choice">
+        <img src="/asset/img/Scissor.png" alt="scissors">
+      </div>
     </section>
     <section class="selection-container">
-        <div id="player-selection" class="selection"></div>
-        <div id="computer-selection" class="selection"></div>
+      <div class="selection">
+        <figure>
+          <img src="/asset/img/Human.png" alt="Player">
+        </figure>
+        <p id="player-selection">Select</p>
+      </div>
+      <div class="selection">
+        <figure>
+          <img src="/asset/img/Robot.png" alt="Robot">
+        </figure>
+        <p id="computer-selection">Auto</p>
+      </div>
     </section>
   </main>
 
