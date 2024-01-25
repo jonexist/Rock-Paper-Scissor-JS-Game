@@ -8,6 +8,33 @@
 </head>
 <body>
   
+  <main class="game-container">
+    <h1 class="game-title">Rock Paper Scissors</h1>
+    <section class="game-options">
+        <button id="rock" class="game-option">Rock</button>
+        <button id="paper" class="game-option">Paper</button>
+        <button id="scissors" class="game-option">Scissors</button>
+    </section>
+    <section id="result" class="game-result"></section>
+    <section class="score-container">
+        <div class="score">
+            <h2>Computer Score: <span id="computer-score">0</span></h2>
+            <h2>Human Score: <span id="human-score">0</span></h2>
+        </div>
+        <div class="round-winner">
+            <h2>Round Winner: <span id="round-winner"></span></h2>
+        </div>
+        <div class="game-winner">
+            <h2>Final Game Winner: <span id="game-winner"></span></h2>
+        </div>
+    </section>
+    <section class="selection-container">
+        <div id="player-selection" class="selection"></div>
+        <div id="computer-selection" class="selection"></div>
+    </section>
+  </main>
+
   <script defer src="/asset/js/main.js"></script>
+  
 </body>
 </html>
