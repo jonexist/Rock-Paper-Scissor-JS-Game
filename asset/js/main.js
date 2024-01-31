@@ -7,6 +7,7 @@ let gameChoices = document.querySelectorAll('.game-choice'); // Array of game ch
 let selectionContainer = document.querySelector('.selection-container'); // Container for player and computer selections
 let gameContainer = document.querySelector('.game-options'); // Container for game options
 let playAgain = document.getElementById('replay'); // Button to replay the game
+let getCurrentYear = document.getElementById('date'); // Element to display current year
 
 let playerScore = 0; // Player's score
 let computerScore = 0; // Computer's score
@@ -102,4 +103,5 @@ window.onload = () => {
   bothScore.textContent = `${playerScore} - ${computerScore}`;
   playerSelection.textContent = 'Player';
   computerSelection.textContent = 'Computer';
+  getCurrentYear.textContent = new Date().getFullYear();
 };
