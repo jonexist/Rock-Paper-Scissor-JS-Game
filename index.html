@@ -9,39 +9,46 @@
 <body>
   
   <main class="game-container">
-    <h1 class="game-title">Rock, Paper, Scissors Game</h1>
-    <section class="score-container">
-      <div id="winner" class="winner-text"></div>
-      <div id="score" class="score-text"></div>
-    </section>
-    <section class="game-options">
-      <button class="game-choice" gameAttribute="rock">
-        <img src="/asset/img/Rock.png" alt="rock-icon">
-      </button>
-      <button class="game-choice" gameAttribute="paper">
-        <img src="/asset/img/Paper.png" alt="paper-icon">
-      </button>
-      <button class="game-choice" gameAttribute="scissors">
-        <img src="/asset/img/Scissor.png" alt="scissor-icon">
-      </button>
-    </section>
-    <section class="selection-container">
-      <div class="selection">
-        <figure>
-          <img src="/asset/img/Human.png" alt="Player">
-        </figure>
-        <p id="player-selection"></p>
+    <div class="game-components">
+      <h1 class="game-title">Rock, Paper, Scissors Game</h1>
+      <section class="score-container">
+        <div id="winner" class="winner-text"></div>
+        <div id="score" class="score-text"></div>
+      </section>
+      <section class="game-options">
+        <button class="game-choice" gameAttribute="rock">
+          <img src="/asset/img/Rock.png" alt="rock-icon">
+        </button>
+        <button class="game-choice" gameAttribute="paper">
+          <img src="/asset/img/Paper.png" alt="paper-icon">
+        </button>
+        <button class="game-choice" gameAttribute="scissors">
+          <img src="/asset/img/Scissor.png" alt="scissor-icon">
+        </button>
+      </section>
+      <section class="selection-container">
+        <div class="selection">
+          <figure>
+            <img src="/asset/img/Human.png" alt="Player">
+          </figure>
+          <p id="player-selection"></p>
+        </div>
+        <div class="versus-text">Vs.</div>
+        <div class="selection">
+          <figure>
+            <img src="/asset/img/Robot.png" alt="Robot">
+          </figure>
+          <p id="computer-selection"></p>
+        </div>
+      </section>
+      <div class="replay-btn">
+        <button id="replay" class="play-again-btn hidden">Play again</button>
       </div>
-      <div class="versus-text">Vs.</div>
-      <div class="selection">
-        <figure>
-          <img src="/asset/img/Robot.png" alt="Robot">
-        </figure>
-        <p id="computer-selection"></p>
-      </div>
-    </section>
-    <button id="replay" class="play-again-btn hidden">Play again</button>
+    </div>
   </main>
+  <footer class="author">
+    <p>© <span id="date"></span> Created by Jonathan Goboli</p>
+  </footer>
 
   <script defer src="/asset/js/main.js"></script>
   
